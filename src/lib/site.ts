@@ -35,3 +35,10 @@ export const SHOW = {
   caseStudies: false,
   testimonials: false,
 } as const;
+
+// Tautan toko aplikasi. Isi URL saat aplikasi sudah terbit; yang kosong tidak ditampilkan.
+export const APPS = {
+  playStore: "",
+  appStore: "",
+  accessLink: waLink("Halo, saya ingin meminta akses aplikasi AR Corporation."),
+};

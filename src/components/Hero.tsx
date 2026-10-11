@@ -1,6 +1,7 @@
 import { m } from "motion/react";
 import { Button } from "./ui/Button";
 import { fadeUp, stagger } from "../lib/motion";
+import { APPS } from "../lib/site";
 
 const particles = Array.from({ length: 18 }, (_, i) => ({
   left: `${(i * 53) % 100}%`,
@@ -38,7 +39,7 @@ export function Hero() {
         </m.p>
         <m.div variants={fadeUp} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button href="#contact">Start Project</Button>
-          <Button variant="secondary" href="#download">Download App</Button>
+          <Button variant="secondary" href={APPS.accessLink}>Minta Akses Aplikasi</Button>
         </m.div>
       </m.div>
     </section>

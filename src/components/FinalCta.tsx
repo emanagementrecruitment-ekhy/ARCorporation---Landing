@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from "react";
 import { m } from "motion/react";
-import { Apple, MessageCircle, Smartphone } from "lucide-react";
+import { MessageCircle, Smartphone } from "lucide-react";
 import { Button } from "./ui/Button";
 import { GoldParticles } from "./Hero";
 import { fadeUp, stagger, viewport } from "../lib/motion";
-import { waLink } from "../lib/site";
+import { waLink, APPS } from "../lib/site";
 
 const field =
   "min-h-[44px] w-full rounded-[4px] border border-gold-muted/60 bg-black px-4 py-3 text-sm text-white placeholder:text-neutral-500 focus:border-gold";
@@ -78,12 +78,12 @@ export function FinalCta() {
         </m.form>
 
         <m.div id="download" variants={fadeUp} className="mt-12 border-t border-gold-muted/30 pt-10">
-          <p className="mb-5 text-sm uppercase tracking-[0.25em] text-gold-muted">Download App on iOS &amp; Android</p>
+          <p className="mb-5 text-sm uppercase tracking-[0.25em] text-gold-muted">Aplikasi Web, Android &amp; AR Corp Desktop</p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button variant="secondary" href="#download"><Apple size={18} aria-hidden /> App Store</Button>
-            <Button variant="secondary" href="#download"><Smartphone size={18} aria-hidden /> Google Play</Button>
+            <Button variant="secondary" href={APPS.accessLink}><Smartphone size={18} aria-hidden /> Minta Akses Aplikasi</Button>
+            {APPS.playStore && <Button variant="secondary" href={APPS.playStore}>Google Play</Button>}
+            {APPS.appStore && <Button variant="secondary" href={APPS.appStore}>App Store</Button>}
           </div>
-          <p className="mt-3 text-xs text-muted">Tautan store belum tersedia.</p>
         </m.div>
       </m.div>
     </section>

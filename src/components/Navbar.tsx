@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, m } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
-import { SHOW } from "../lib/site";
+import { SHOW, APPS } from "../lib/site";
 
 const allLinks = [
   ["Services", "#services"],
@@ -87,7 +87,7 @@ export function Navbar() {
         </ul>
         <div className="hidden items-center gap-3 lg:flex">
           <Button href="#contact" className="!py-2">Start Project</Button>
-          <Button variant="secondary" href="#download" className="!py-2">Download App</Button>
+          <Button variant="secondary" href={APPS.accessLink} className="!py-2">Akses Aplikasi</Button>
         </div>
         <button
           className="flex h-11 w-11 items-center justify-center rounded text-gold lg:hidden"
@@ -126,7 +126,7 @@ export function Navbar() {
               </ul>
               <div className="flex flex-col gap-3">
                 <Button href="#contact" onClick={() => setOpen(false)}>Start Project</Button>
-                <Button variant="secondary" href="#download" onClick={() => setOpen(false)}>Download App</Button>
+                <Button variant="secondary" href={APPS.accessLink} onClick={() => setOpen(false)}>Akses Aplikasi</Button>
               </div>
             </div>
           </m.div>
