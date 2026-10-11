@@ -1,15 +1,9 @@
-﻿import { Navbar } from "./components/Navbar";
+﻿import { lazy, Suspense } from "react";
+import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { TrustMetrics } from "./components/TrustMetrics";
-import { Services } from "./components/Services";
-import { Process } from "./components/Process";
-import { CaseStudies } from "./components/CaseStudies";
-import { Testimonials } from "./components/Testimonials";
-import { Pricing } from "./components/Pricing";
-import { Faq } from "./components/Faq";
-import { FinalCta } from "./components/FinalCta";
-import { Footer } from "./components/Footer";
-import { SHOW } from "./lib/site";
+
+const Below = lazy(() => import("./Below"));
+const Footer = lazy(() => import("./components/Footer").then((m) => ({ default: m.Footer })));
 
 export default function App() {
   return (
@@ -20,17 +14,13 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
-        {SHOW.metrics && <TrustMetrics />}
-        <Services />
-        <Process />
-        {SHOW.caseStudies && <CaseStudies />}
-        {SHOW.testimonials && <Testimonials />}
-        <Pricing />
-        <Faq />
-        <FinalCta />
+        <Suspense fallback={<div aria-hidden className="min-h-screen" />}>
+          <Below />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </>
   );
 }
-
