@@ -1,5 +1,5 @@
-﻿import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
+import { AnimatePresence, m } from "motion/react";
 import { Plus } from "lucide-react";
 import { Section, SectionTitle } from "./ui/Section";
 
@@ -31,14 +31,14 @@ export function Faq() {
                   className="group flex min-h-[44px] w-full cursor-pointer items-center justify-between gap-4 p-5 text-left font-heading font-medium text-gold"
                 >
                   <span className="group-hover:underline">{q}</span>
-                  <motion.span aria-hidden animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }} className="shrink-0">
+                  <m.span aria-hidden animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }} className="shrink-0">
                     <Plus />
-                  </motion.span>
+                  </m.span>
                 </button>
               </h3>
               <AnimatePresence initial={false}>
                 {isOpen && (
-                  <motion.div
+                  <m.div
                     id={`faq-panel-${i}`}
                     role="region"
                     aria-labelledby={`faq-btn-${i}`}
@@ -49,7 +49,7 @@ export function Faq() {
                     className="overflow-hidden"
                   >
                     <p className="px-5 pb-5 text-sm text-muted">{a}</p>
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
             </div>

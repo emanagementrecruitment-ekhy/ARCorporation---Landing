@@ -1,4 +1,4 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import type { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 
 type Variant = "primary" | "secondary";
@@ -26,13 +26,13 @@ export function Button({
   const cls = `${base} ${styles[variant]} ${className}`;
   if (href) {
     return (
-      <motion.a href={href} onClick={rest.onClick} className={cls} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
+      <m.a href={href} onClick={rest.onClick} className={cls} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
         {children}
-      </motion.a>
+      </m.a>
     );
   }
   return (
-    <motion.button
+    <m.button
       type={rest.type ?? "button"}
       onClick={rest.onClick}
       className={cls}
@@ -40,6 +40,6 @@ export function Button({
       whileTap={{ scale: 0.95 }}
     >
       {children}
-    </motion.button>
+    </m.button>
   );
 }

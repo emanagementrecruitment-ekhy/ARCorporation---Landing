@@ -1,4 +1,4 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import { Check } from "lucide-react";
 import { Section, SectionTitle } from "./ui/Section";
 import { Button } from "./ui/Button";
@@ -19,9 +19,9 @@ export function Pricing() {
         Termasuk Web, Aplikasi Android, dan AR Corp Desktop dengan mode offline&mdash;tanpa biaya tambahan.
       </SectionTitle>
 
-      <motion.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid items-stretch gap-6 lg:grid-cols-3">
+      <m.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid items-stretch gap-6 lg:grid-cols-3">
         {plans.map((p) => (
-          <motion.li
+          <m.li
             key={p.name}
             variants={fadeUp}
             className={`relative flex flex-col items-center rounded-lg border bg-black p-8 pt-9 text-center ${
@@ -45,11 +45,11 @@ export function Pricing() {
             <Button variant={p.featured ? "primary" : "secondary"} href={waLink(`Halo, saya tertarik dengan paket ${p.name}.`)} className="mt-6">
               Pilih Paket
             </Button>
-          </motion.li>
+          </m.li>
         ))}
-      </motion.ul>
+      </m.ul>
 
-      <motion.div
+      <m.div
         initial="hidden"
         whileInView="show"
         viewport={viewport}
@@ -61,7 +61,7 @@ export function Pricing() {
         <p className="whitespace-nowrap font-heading text-2xl font-bold text-white">Rp 8.000.000</p>
         <p className="text-sm font-semibold text-gold">Tidak terbatas<br />karyawan/Tera</p>
         <Button href={waLink("Halo, saya tertarik dengan paket Pro Lifetime.")} className="whitespace-nowrap">Pilih Paket</Button>
-      </motion.div>
+      </m.div>
     </Section>
   );
 }

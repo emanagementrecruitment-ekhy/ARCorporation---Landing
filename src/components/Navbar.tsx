@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, m } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
 import { SHOW } from "../lib/site";
@@ -59,7 +59,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? "border-b border-gold-muted/40 bg-black/90 backdrop-blur" : "bg-transparent"
+        scrolled || open ? "border-b border-gold-muted/40 bg-black/90" : "bg-transparent"
       }`}
     >
       <nav aria-label="Utama" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -101,7 +101,7 @@ export function Navbar() {
       </nav>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <m.div
             id="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -129,7 +129,7 @@ export function Navbar() {
                 <Button variant="secondary" href="#download" onClick={() => setOpen(false)}>Download App</Button>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

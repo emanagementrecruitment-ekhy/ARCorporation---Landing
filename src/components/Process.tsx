@@ -1,4 +1,4 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import { Section, SectionTitle } from "./ui/Section";
 import { fadeUp, stagger, viewport } from "../lib/motion";
 
@@ -14,7 +14,7 @@ export function Process() {
   return (
     <Section id="process" className="bg-[#0a0a0a]">
       <SectionTitle eyebrow="Process" title="Bagaimana Sistem Kami Bekerja" />
-      <motion.ol
+      <m.ol
         initial="hidden"
         whileInView="show"
         viewport={viewport}
@@ -22,7 +22,7 @@ export function Process() {
         className="relative grid gap-8 before:absolute before:bottom-6 before:left-6 before:top-6 before:w-px before:bg-gold-muted/40 lg:grid-cols-5 lg:gap-4 lg:before:hidden"
       >
         {/* Connecting line (desktop): draws left to right */}
-        <motion.span
+        <m.span
           aria-hidden
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
@@ -32,7 +32,7 @@ export function Process() {
           className="absolute left-[10%] right-[10%] top-6 hidden h-px bg-gold-muted lg:block"
         />
         {steps.map(([title, text], i) => (
-          <motion.li key={title} variants={fadeUp} className="relative pl-16 lg:pl-0 lg:text-center">
+          <m.li key={title} variants={fadeUp} className="relative pl-16 lg:pl-0 lg:text-center">
             <span
               aria-hidden
               className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold bg-black font-heading text-lg font-bold text-gold lg:static lg:mx-auto"
@@ -43,9 +43,9 @@ export function Process() {
               <span className="sr-only">Langkah {i + 1}: </span>{title}
             </h3>
             <p className="mt-2 text-sm text-muted">{text}</p>
-          </motion.li>
+          </m.li>
         ))}
-      </motion.ol>
+      </m.ol>
     </Section>
   );
 }

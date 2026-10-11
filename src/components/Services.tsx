@@ -1,4 +1,4 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import { Users, MapPinned, BarChart3, MessagesSquare, ArrowRight } from "lucide-react";
 import { Section, SectionTitle } from "./ui/Section";
 import { Card } from "./ui/Card";
@@ -15,7 +15,7 @@ export function Services() {
   return (
     <Section id="services">
       <SectionTitle eyebrow="Services" title="Our Premium Services" />
-      <motion.ul
+      <m.ul
         initial="hidden"
         whileInView="show"
         viewport={viewport}
@@ -38,7 +38,7 @@ export function Services() {
             </Card>
           </li>
         ))}
-      </motion.ul>
+      </m.ul>
     </Section>
   );
 }

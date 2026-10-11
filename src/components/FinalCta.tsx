@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import { Apple, MessageCircle, Smartphone } from "lucide-react";
 import { Button } from "./ui/Button";
 import { GoldParticles } from "./Hero";
@@ -33,19 +33,19 @@ export function FinalCta() {
     <section id="contact" className="deco-bg relative overflow-hidden border-y border-gold-muted/40 px-5 py-20 sm:px-8 md:py-28">
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,215,0,.14),transparent_65%)]" />
       <GoldParticles />
-      <motion.div initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="relative mx-auto max-w-3xl text-center">
-        <motion.h2 variants={fadeUp} className="text-[28px] font-bold !text-gold sm:text-[32px]">
+      <m.div initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="relative mx-auto max-w-3xl text-center">
+        <m.h2 variants={fadeUp} className="text-[28px] font-bold !text-gold sm:text-[32px]">
           Siap Mulai?
-        </motion.h2>
-        <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-xl text-muted">
+        </m.h2>
+        <m.p variants={fadeUp} className="mx-auto mt-5 max-w-xl text-muted">
           Hubungi kami untuk demo langsung dan diskusi kebutuhan perusahaan Anda.
-        </motion.p>
-        <motion.div variants={fadeUp} className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        </m.p>
+        <m.div variants={fadeUp} className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button href={waLink("Halo, saya ingin memulai proyek dengan AR Corporation.")}>Start Project</Button>
           <Button variant="secondary" href={waLink("Halo, saya ingin menjadwalkan demo sistem HR.")}>Schedule Demo</Button>
-        </motion.div>
+        </m.div>
 
-        <motion.form
+        <m.form
           id="contact-form"
           variants={fadeUp}
           onSubmit={onSubmit}
@@ -75,17 +75,17 @@ export function FinalCta() {
               </a>
             )}
           </div>
-        </motion.form>
+        </m.form>
 
-        <motion.div id="download" variants={fadeUp} className="mt-12 border-t border-gold-muted/30 pt-10">
+        <m.div id="download" variants={fadeUp} className="mt-12 border-t border-gold-muted/30 pt-10">
           <p className="mb-5 text-sm uppercase tracking-[0.25em] text-gold-muted">Download App on iOS &amp; Android</p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button variant="secondary" href="#download"><Apple size={18} aria-hidden /> App Store</Button>
             <Button variant="secondary" href="#download"><Smartphone size={18} aria-hidden /> Google Play</Button>
           </div>
           <p className="mt-3 text-xs text-muted">Tautan store belum tersedia.</p>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </section>
   );
 }

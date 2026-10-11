@@ -1,4 +1,4 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import { Star } from "lucide-react";
 import { Section, SectionTitle } from "./ui/Section";
 import { stagger, viewport } from "../lib/motion";
@@ -20,9 +20,9 @@ export function Testimonials() {
   return (
     <Section id="testimonial" className="bg-[#0a0a0a]">
       <SectionTitle eyebrow="Testimonial" title="What Our Clients Say" />
-      <motion.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <m.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {items.map((t) => (
-          <motion.li key={t.name} variants={fadeScale} className="flex">
+          <m.li key={t.name} variants={fadeScale} className="flex">
             <figure className="m-0 flex w-full flex-col rounded-lg border border-gold-muted bg-black p-6 transition-shadow hover:shadow-[0_0_28px_rgba(255,215,0,.2)] sm:p-8">
               <div role="img" aria-label="Rating 5 dari 5 bintang" className="mb-4 flex gap-1 text-gold">
                 {Array.from({ length: 5 }).map((_, n) => (
@@ -35,9 +35,9 @@ export function Testimonials() {
                 <p className="text-sm text-muted">{t.role}</p>
               </figcaption>
             </figure>
-          </motion.li>
+          </m.li>
         ))}
-      </motion.ul>
+      </m.ul>
     </Section>
   );
 }

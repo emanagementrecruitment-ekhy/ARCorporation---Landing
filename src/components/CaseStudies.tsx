@@ -1,4 +1,4 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import { Section, SectionTitle } from "./ui/Section";
 import { Card } from "./ui/Card";
 import { stagger, viewport } from "../lib/motion";
@@ -14,7 +14,7 @@ export function CaseStudies() {
   return (
     <Section id="portfolio">
       <SectionTitle eyebrow="Portfolio" title="Success Stories" />
-      <motion.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid gap-6 lg:grid-cols-3">
+      <m.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid gap-6 lg:grid-cols-3">
         {cases.map((c) => (
           <li key={c.name} className="flex">
             <Card className="w-full">
@@ -30,7 +30,7 @@ export function CaseStudies() {
             </Card>
           </li>
         ))}
-      </motion.ul>
+      </m.ul>
     </Section>
   );
 }

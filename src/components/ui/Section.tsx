@@ -1,13 +1,13 @@
-﻿import { motion } from "motion/react";
+import { m } from "motion/react";
 import type { ReactNode } from "react";
 import { fadeUp, viewport } from "../../lib/motion";
 
 export function SectionTitle({ eyebrow, title, children }: { eyebrow: string; title: string; children?: ReactNode }) {
   return (
-    <motion.div initial="hidden" whileInView="show" viewport={viewport} variants={fadeUp} className="mx-auto mb-12 max-w-3xl text-center">
+    <m.div initial="hidden" whileInView="show" viewport={viewport} variants={fadeUp} className="mx-auto mb-12 max-w-3xl text-center">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-muted">{eyebrow}</p>
       <h2 className="text-[28px] font-bold !text-gold sm:text-[32px]">{title}</h2>
-      <motion.span
+      <m.span
         aria-hidden
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
@@ -17,7 +17,7 @@ export function SectionTitle({ eyebrow, title, children }: { eyebrow: string; ti
         className="mx-auto mt-5 block h-[3px] w-24 bg-gold"
       />
       {children && <p className="mt-6 text-[15px] text-muted">{children}</p>}
-    </motion.div>
+    </m.div>
   );
 }
 

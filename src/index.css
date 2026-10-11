@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @theme {
   --color-gold: #ffd700;
@@ -52,6 +52,7 @@
   opacity: 0;
   animation: float 9s ease-in-out infinite;
 }
+@media (max-width: 640px) { .particle:nth-child(n+9) { display: none; } }
 @keyframes float {
   0%, 100% { transform: translateY(0); opacity: 0; }
   30% { opacity: .7; }
