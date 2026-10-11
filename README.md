@@ -24,8 +24,8 @@ npm run preview  # coba hasil build
 
 ## Bagian yang masih disembunyikan
 
-Metrik, studi kasus, dan testimoni masih berisi contoh, jadi disembunyikan lewat `SHOW` di `src/lib/site.ts`.
-Isi dengan data asli (`TrustMetrics.tsx`, `CaseStudies.tsx`, `Testimonials.tsx`), lalu ubah saklarnya menjadi `true`.
+Studi kasus dan testimoni masih berisi contoh, jadi disembunyikan lewat `SHOW` di `src/lib/site.ts`. Bagian metrik sudah tampil dengan fakta produk.
+Isi dengan data asli (`CaseStudies.tsx`, `Testimonials.tsx`), lalu ubah saklarnya menjadi `true`.
 
 ## Deploy
 

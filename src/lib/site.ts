@@ -31,7 +31,7 @@ export function waLink(message: string) {
 
 // Saklar tampil/sembunyi. Ubah ke true setelah data real (bukan contoh) tersedia.
 export const SHOW = {
-  metrics: false,
+  metrics: true,
   caseStudies: false,
   testimonials: false,
 } as const;

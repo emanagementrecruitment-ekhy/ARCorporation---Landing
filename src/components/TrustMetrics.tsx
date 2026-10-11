@@ -2,17 +2,18 @@ import { m } from "motion/react";
 import { Section } from "./ui/Section";
 import { fadeUp, stagger, viewport } from "../lib/motion";
 
-// PLACEHOLDER: ganti dengan data real perusahaan.
+// Fakta yang pasti benar (diambil dari paket dan produk). Ganti dengan angka klien bila data aslinya sudah ada.
 const metrics = [
-  ["150+", "Trusted Clients"],
-  ["500+", "Successful Projects"],
-  ["98%", "Client Satisfaction Rate"],
-  ["24/7", "Dedicated Support Team"],
+  ["3", "Platform: Web, Android, dan AR Corp Desktop"],
+  ["Offline", "Mode offline pada AR Corp Desktop"],
+  ["1×", "Biaya instalasi sekali bayar, tanpa biaya tambahan"],
+  ["Lifetime", "Paket Pro tanpa langganan bulanan"],
 ];
 
 export function TrustMetrics() {
   return (
     <Section className="!py-12">
+      <h2 className="sr-only">Keunggulan sistem</h2>
       <m.ul
         initial="hidden"
         whileInView="show"
