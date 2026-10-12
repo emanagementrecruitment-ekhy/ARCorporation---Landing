@@ -84,17 +84,17 @@
   clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); animation: starpulse 7s ease-in-out infinite; }
 /* Bulan: berjalan pelan melintasi langit (kiri bawah -> puncak -> kanan bawah) */
 .ambient .moon { position: absolute; left: 0; top: 0; width: clamp(96px, 14vmin, 170px); aspect-ratio: 1; border-radius: 50%;
-  background: radial-gradient(circle at 36% 30%, #fff8d0 0%, #f6d870 40%, #d6a63a 74%, #9e6f18 100%);
-  box-shadow: 0 0 46px 12px rgba(255,215,0,.24), 0 0 130px 46px rgba(255,200,60,.12), inset -14px -9px 24px rgba(110,70,8,.5);
+  background: radial-gradient(circle at 36% 30%, #fffbd6 0%, #ffe45c 30%, #fbc623 58%, #e0a010 82%, #b87608 100%);
+  box-shadow: 0 0 50px 14px rgba(255,214,40,.38), 0 0 150px 56px rgba(255,190,30,.20), inset -16px -10px 26px rgba(150,86,0,.45);
   will-change: transform, opacity; animation: moonwalk 110s linear infinite; }
 .ambient .moon::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
   background:
-    radial-gradient(circle at 30% 38%, rgba(140,92,12,.34) 0 9%, transparent 10%),
-    radial-gradient(circle at 58% 24%, rgba(140,92,12,.3) 0 6%, transparent 7%),
-    radial-gradient(circle at 66% 58%, rgba(140,92,12,.38) 0 11%, transparent 12%),
-    radial-gradient(circle at 40% 72%, rgba(140,92,12,.28) 0 7%, transparent 8%),
-    radial-gradient(circle at 22% 62%, rgba(140,92,12,.22) 0 4%, transparent 5%); }
-.ambient .moon b { position: absolute; inset: -24%; border-radius: 50%; border: 1px solid rgba(255,215,0,.2); animation: halo 8s ease-in-out infinite; }
+    radial-gradient(circle at 30% 38%, rgba(170,100,0,.38) 0 9%, transparent 10%),
+    radial-gradient(circle at 58% 24%, rgba(170,100,0,.34) 0 6%, transparent 7%),
+    radial-gradient(circle at 66% 58%, rgba(170,100,0,.42) 0 11%, transparent 12%),
+    radial-gradient(circle at 40% 72%, rgba(170,100,0,.32) 0 7%, transparent 8%),
+    radial-gradient(circle at 22% 62%, rgba(170,100,0,.26) 0 4%, transparent 5%); }
+.ambient .moon b { position: absolute; inset: -24%; border-radius: 50%; border: 1px solid rgba(255,214,40,.3); animation: halo 8s ease-in-out infinite; }
 .ambient .shoot { position: absolute; width: 150px; height: 2px; opacity: 0; border-radius: 2px; transform: rotate(-30deg);
   background: linear-gradient(90deg, rgba(255,235,160,0), #fffbe0); box-shadow: 0 0 8px rgba(255,235,160,.8); }
 .ambient .sh1 { left: 64vw; top: 6vh; animation: shoot 12s ease-in infinite 3s; }
@@ -108,11 +108,11 @@
 @keyframes halo { 0%, 100% { transform: scale(1); opacity: .35; } 50% { transform: scale(1.12); opacity: .9; } }
 @keyframes moonwalk {
   0%   { transform: translate3d(-22vw, 52vh, 0); opacity: 0; }
-  6%   { opacity: .6; }
-  25%  { transform: translate3d(14vw, 24vh, 0); opacity: .6; }
-  50%  { transform: translate3d(52vw, 9vh, 0); opacity: .6; }
-  75%  { transform: translate3d(86vw, 24vh, 0); opacity: .6; }
-  94%  { opacity: .6; }
+  6%   { opacity: .88; }
+  25%  { transform: translate3d(14vw, 24vh, 0); opacity: .88; }
+  50%  { transform: translate3d(52vw, 9vh, 0); opacity: .88; }
+  75%  { transform: translate3d(86vw, 24vh, 0); opacity: .88; }
+  94%  { opacity: .88; }
   100% { transform: translate3d(118vw, 52vh, 0); opacity: 0; }
 }
 @keyframes shoot { 0% { opacity: 0; transform: translate3d(0,0,0) rotate(-30deg); } 3% { opacity: 1; } 9% { opacity: 0; transform: translate3d(-340px,196px,0) rotate(-30deg); } 100% { opacity: 0; transform: translate3d(-340px,196px,0) rotate(-30deg); } }
@@ -125,5 +125,5 @@
   .ambient .neb, .ambient .dots, .ambient .moon b, .ambient .star i { animation: none; }
   .ambient .star i { opacity: .7; }
   .ambient .shoot { display: none; }
-  .ambient .moon { animation: none; transform: translate3d(78vw, 12vh, 0); opacity: .6; }
+  .ambient .moon { animation: none; transform: translate3d(78vw, 12vh, 0); opacity: .88; }
 }
