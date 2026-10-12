@@ -32,7 +32,7 @@ export function Hero() {
             width="503"
             height="460"
             fetchPriority="high"
-            className="logo-float h-36 w-auto drop-shadow-[0_0_34px_rgba(255,215,0,.35)] sm:h-44 lg:h-52"
+            className="logo-float opacity-80 h-36 w-auto drop-shadow-[0_0_34px_rgba(255,215,0,.35)] sm:h-44 lg:h-52"
           />
         </m.div>
         <m.h1 variants={fadeUp} className="text-4xl font-bold !text-gold sm:text-5xl">
