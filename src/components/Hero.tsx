@@ -25,9 +25,16 @@ export function Hero() {
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(255,215,0,.14),transparent_60%)]" />
       <GoldParticles />
       <m.div initial="hidden" animate="show" variants={stagger} className="relative mx-auto max-w-4xl text-center">
-        <m.p variants={fadeUp} className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-gold-muted">
-          AR Corporation
-        </m.p>
+        <m.div variants={fadeUp} className="mb-6 flex justify-center">
+          <img
+            src="/logo-hero.webp"
+            alt="AR Corporation"
+            width="503"
+            height="460"
+            fetchPriority="high"
+            className="logo-float h-36 w-auto drop-shadow-[0_0_34px_rgba(255,215,0,.35)] sm:h-44 lg:h-52"
+          />
+        </m.div>
         <m.h1 variants={fadeUp} className="text-4xl font-bold !text-gold sm:text-5xl">
           Good Grip, Profesional, Trusted
         </m.h1>
