@@ -27,7 +27,9 @@ export function Hero() {
       <m.div initial="hidden" animate="show" variants={stagger} className="relative mx-auto max-w-4xl text-center">
         <m.div variants={fadeUp} className="mb-6 flex justify-center">
           <img
-            src="/logo-hero.webp"
+            src="/logo-hero-300.webp"
+            srcSet="/logo-hero-300.webp 328w, /logo-hero-460.webp 503w"
+            sizes="(min-width: 1024px) 227px, (min-width: 640px) 192px, 157px"
             alt="AR Corporation"
             width="503"
             height="460"
