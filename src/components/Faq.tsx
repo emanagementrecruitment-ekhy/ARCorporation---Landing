@@ -15,7 +15,7 @@ const faqs = [
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <Section id="faq" className="bg-[#0a0a0a]/55">
+    <Section id="faq" className="bg-[#0a0a0a]">
       <SectionTitle eyebrow="FAQ" title="Frequently Asked Questions" />
       <div className="mx-auto max-w-3xl space-y-3">
         {faqs.map(([q, a], i) => {

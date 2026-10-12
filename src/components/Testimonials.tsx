@@ -18,7 +18,7 @@ const fadeScale: Variants = {
 
 export function Testimonials() {
   return (
-    <Section id="testimonial" className="bg-[#0a0a0a]/55">
+    <Section id="testimonial" className="bg-[#0a0a0a]">
       <SectionTitle eyebrow="Testimonial" title="What Our Clients Say" />
       <m.ul initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {items.map((t) => (
