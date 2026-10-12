@@ -12,7 +12,7 @@ const steps = [
 
 export function Process() {
   return (
-    <Section id="process" className="bg-[#0a0a0a]">
+    <Section id="process" className="bg-[#05060d]/60">
       <SectionTitle eyebrow="Process" title="Bagaimana Sistem Kami Bekerja" />
       <m.ol
         initial="hidden"

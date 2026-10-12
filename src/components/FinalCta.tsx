@@ -30,7 +30,7 @@ export function FinalCta() {
   };
 
   return (
-    <section id="contact" className="deco-bg relative overflow-hidden border-y border-gold-muted/40 px-5 py-20 sm:px-8 md:py-28">
+    <section id="contact" className="relative overflow-hidden border-y border-gold-muted/40 px-5 py-20 sm:px-8 md:py-28">
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,215,0,.14),transparent_65%)]" />
       <GoldParticles />
       <m.div initial="hidden" whileInView="show" viewport={viewport} variants={stagger} className="relative mx-auto max-w-3xl text-center">

@@ -21,7 +21,7 @@ export function GoldParticles() {
 
 export function Hero() {
   return (
-    <section id="top" className="deco-bg relative flex min-h-[100svh] items-center overflow-hidden px-5 pb-16 pt-28 sm:px-8">
+    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden px-5 pb-16 pt-28 sm:px-8">
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(255,215,0,.14),transparent_60%)]" />
       <GoldParticles />
       <m.div initial="hidden" animate="show" variants={stagger} className="relative mx-auto max-w-4xl text-center">
