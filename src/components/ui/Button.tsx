@@ -26,7 +26,7 @@ export function Button({
   const cls = `${base} ${styles[variant]} ${className}`;
   if (href) {
     return (
-      <m.a href={href} onClick={rest.onClick} className={cls} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
+      <m.a href={href} download={rest.download} onClick={rest.onClick} className={cls} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
         {children}
       </m.a>
     );

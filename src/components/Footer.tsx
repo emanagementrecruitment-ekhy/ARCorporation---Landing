@@ -81,8 +81,8 @@ export function Footer() {
         <nav aria-label="Company">
           <h2 className={colTitle}>Company</h2>
           <ul className="space-y-1">
-            {[["Process", "#process"], ["Success Stories", "#portfolio"], ["Pricing", "#pricing"], ["FAQ", "#faq"]].filter(([, h]) => h !== "#portfolio" || SHOW.caseStudies).map(([l, h]) => (
-              <li key={l}><a className={link} href={h}>{l}</a></li>
+            {[["Process", "#process"], ["Success Stories", "#portfolio"], ["Pricing", "#pricing"], ["FAQ", "#faq"], ["Company Profile (PDF)", "/AR-Corporation-Company-Profile.pdf"]].filter(([, h]) => h !== "#portfolio" || SHOW.caseStudies).map(([l, h]) => (
+              <li key={l}><a className={link} href={h} download={h.endsWith(".pdf") ? "" : undefined}>{l}</a></li>
             ))}
           </ul>
         </nav>

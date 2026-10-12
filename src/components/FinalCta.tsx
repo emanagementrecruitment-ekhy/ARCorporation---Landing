@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { m } from "motion/react";
-import { MessageCircle, Smartphone } from "lucide-react";
+import { Download, MessageCircle, Smartphone } from "lucide-react";
 import { Button } from "./ui/Button";
 import { GoldParticles } from "./Hero";
 import { fadeUp, stagger, viewport } from "../lib/motion";
@@ -81,6 +81,7 @@ export function FinalCta() {
           <p className="mb-5 text-sm uppercase tracking-[0.25em] text-gold-muted">Aplikasi Web, Android &amp; AR Corp Desktop</p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button variant="secondary" href={APPS.accessLink}><Smartphone size={18} aria-hidden /> Minta Akses Aplikasi</Button>
+            <Button variant="secondary" href="/AR-Corporation-Company-Profile.pdf" download="AR-Corporation-Company-Profile.pdf"><Download size={18} aria-hidden /> Unduh Company Profile (PDF)</Button>
             {APPS.playStore && <Button variant="secondary" href={APPS.playStore}>Google Play</Button>}
             {APPS.appStore && <Button variant="secondary" href={APPS.appStore}>App Store</Button>}
           </div>
