@@ -53,6 +53,7 @@ export function Footer() {
     <footer className="border-t border-gold-muted/40 bg-black px-5 py-12 sm:px-8">
       <div className="mx-auto grid max-w-6xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
+          <img src="/logo.webp" alt="" width="88" height="80" loading="lazy" className="mb-3 h-20 w-auto" />
           <p className="font-heading text-lg font-bold text-white">
             <span className="gold-text">AR</span> Corporation
           </p>

@@ -63,8 +63,9 @@ export function Navbar() {
       }`}
     >
       <nav aria-label="Utama" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="font-heading text-base font-bold tracking-wide text-white">
-          <span className="gold-text">AR</span> <span className="text-white">Corporation</span>
+        <a href="#top" className="flex items-center gap-2 font-heading text-base font-bold tracking-wide text-white">
+          <img src="/logo.webp" alt="" width="44" height="40" className="h-10 w-auto" />
+          <span><span className="gold-text">AR</span> <span className="text-white">Corporation</span></span>
         </a>
         <ul className="hidden items-center gap-8 lg:flex">
           {links.map(([label, href]) => (
