@@ -44,7 +44,7 @@ export function Hero() {
           Integrated HR System Management di Lapangan: Web, Android, dan Desktop dalam satu sistem
         </m.p>
         <m.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base text-muted">
-          Kelola karyawan lapangan lewat Web, Aplikasi Android, dan AR Corp Desktop dengan mode offline, tanpa biaya tambahan.
+          Kelola absensi GPS, payroll dan slip gaji, kasbon, serta voucher komisi karyawan lapangan lewat Web, Aplikasi Android, dan AR Corp Desktop dengan mode offline, tanpa biaya tambahan.
         </m.p>
         <m.div variants={fadeUp} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button href="#contact">Start Project</Button>

@@ -3,7 +3,7 @@ import { AnimatePresence, m } from "motion/react";
 import { Plus } from "lucide-react";
 import { Section, SectionTitle } from "./ui/Section";
 
-const faqs = [
+export const faqs = [
   ["Berapa lama implementasi sistem?", "Tergantung skala dan kebutuhan integrasi. Estimasi waktu kami sampaikan setelah tahap konsultasi dan assessment."],
   ["Apakah sistem compatible dengan HR tools existing?", "Kebutuhan integrasi dengan tools HR yang sudah Anda gunakan kami bahas saat konsultasi, agar solusinya sesuai kondisi perusahaan Anda."],
   ["Bagaimana keamanan data karyawan?", "Keamanan data adalah prioritas. Kebijakan dan standar keamanan yang kami terapkan dijelaskan secara rinci saat konsultasi."],
