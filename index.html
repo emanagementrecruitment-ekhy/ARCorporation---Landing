@@ -96,11 +96,15 @@
       .bablast-lc-followup-icon{background:#fffbe0!important;color:#b87608!important}
       #bablast-lc-widget :focus-visible{outline-color:rgba(255,215,0,.6)!important}
       .bablast-lc-dot{background:#bfa14a!important}
-      /* Logo AR Corporation pada tombol chat (saat tertutup) dan avatar header */
-      #bablast-lc-bubble:not(.active),#bablast-lc-bubble:not(.active):hover{
-        background:#000 url(/logo.webp) center/78% no-repeat!important;
-        border:2px solid #ffd700!important;box-shadow:0 6px 20px rgba(255,215,0,.35)!important}
-      #bablast-lc-bubble:not(.active) .bablast-lc-icon-open{visibility:hidden!important}
+      /* Tombol chat berbentuk pil emas "Chat CS" saat tertutup; logo AR tetap di avatar header */
+      #bablast-lc-bubble:not(.active){width:auto!important;height:48px!important;padding:0 18px 0 14px!important;
+        border-radius:999px!important;display:flex!important;align-items:center!important;gap:8px!important;
+        font:600 15px/1 Poppins,Inter,system-ui,sans-serif!important;white-space:nowrap!important;
+        box-shadow:0 6px 20px rgba(255,215,0,.3)!important}
+      #bablast-lc-bubble:not(.active) .bablast-lc-icon-open{display:none!important}
+      #bablast-lc-bubble:not(.active)::before{content:"";width:22px;height:22px;flex:none;
+        background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 14v-3a8 8 0 1 1 16 0v3'/%3E%3Cpath d='M18 19c0 1.657 -2.686 3 -6 3'/%3E%3Cpath d='M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z'/%3E%3Cpath d='M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z'/%3E%3C/svg%3E") center/contain no-repeat}
+      #bablast-lc-bubble:not(.active)::after{content:"Chat CS"}
       #bablast-lc-avatar-box{background:#000 url(/logo.webp) center/82% no-repeat!important;
         border:1.5px solid #000!important}
       #bablast-lc-avatar-text{visibility:hidden!important}
